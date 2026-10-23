@@ -30,30 +30,30 @@ class Program
             result = Console.ReadLine();
             if (result == "touche")
             {
-                Console.WriteLine("Bien joué ! Le cerf est touché !");
+                Console.WriteLine("Bien joué ! Le cerf est touché !\n");
                 deerLife -= 1;
                 successfulShot += 1;
                 arrowNumber -= 1;
             }
             else if (result == "rate")
             {
-                Console.WriteLine("Raté ! Le cerf a esquivé !");
+                Console.WriteLine("Raté ! Le cerf a esquivé !\n");
                 arrowNumber -= 1;
             }
             else
             {
-                Console.WriteLine("Réponse invalide, veuillez réindiquer votre choix");
+                Console.WriteLine("Réponse invalide, veuillez réindiquer votre choix\n");
             }
                 
         } while (deerLife >= 1 && arrowNumber >= 1);
 
         if (deerLife == 0)
         {
-            Console.WriteLine("Le cerf est abbatu !");
+            Console.WriteLine("Le cerf est abbatu !\n");
         }
         else
         {
-            Console.WriteLine("Vous êtes à court de flèches !");
+            Console.WriteLine("Vous êtes à court de flèches !\n");
             bilan = "Chasse ratée !";
         }
 
