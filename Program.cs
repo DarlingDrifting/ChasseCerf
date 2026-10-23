@@ -33,12 +33,18 @@ class Program
                 Console.WriteLine("Bien joué ! Le cerf est touché !");
                 deerLife -= 1;
                 successfulShot += 1;
+                arrowNumber -= 1;
+            }
+            else if (result == "rate")
+            {
+                Console.WriteLine("Raté ! Le cerf a esquivé !");
+                arrowNumber -= 1;
             }
             else
             {
-                Console.WriteLine("Raté ! Le cerf a esquivé !");
+                Console.WriteLine("Réponse invalide, veuillez réindiquer votre choix");
             }
-            arrowNumber -= 1;
+                
         } while (deerLife >= 1 && arrowNumber >= 1);
 
         if (deerLife == 0)
