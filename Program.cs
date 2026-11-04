@@ -20,25 +20,24 @@ class Program
         int arrowNumber = 5;
         int deerLife = 3;
         int successfulShot = 0;
-        string result = "touche";
         string bilan = "Chasse réussie !";
 
         do
         {
             Console.WriteLine("Nombre de flèches restantes : " + arrowNumber);
             Console.WriteLine("Résultat du tir (rate/touche) : ");  
-            result = Console.ReadLine();
+            string result = Console.ReadLine();
             if (result == "touche")
             {
                 Console.WriteLine("Bien joué ! Le cerf est touché !\n");
-                deerLife -= 1;
-                successfulShot += 1;
-                arrowNumber -= 1;
+                deerLife--;
+                successfulShot++;
+                arrowNumber--;
             }
             else if (result == "rate")
             {
                 Console.WriteLine("Raté ! Le cerf a esquivé !\n");
-                arrowNumber -= 1;
+                arrowNumber--;
             }
             else
             {
